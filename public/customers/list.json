@@ -1,0 +1,23 @@
+[
+    {
+        "age": 0, 
+        "id": "cli1", 
+        "imageUrl": "http://lorempixel.com/100/80/people", 
+        "name": "Aqualint Servicios ", 
+        "snippet": ""
+    }, 
+    {
+        "age": 1, 
+        "id": "cli2", 
+        "imageUrl": "http://lorempixel.com/100/80/people", 
+        "name": "Restaurant Sushi",
+        "snippet": ""
+    }, 
+    {
+        "age": 2, 
+        "id": "cli3", 
+        "imageUrl": "http://lorempixel.com/100/80/people", 
+        "name": "Laboratorios Pharma", 
+        "snippet": ""
+    }    
+]

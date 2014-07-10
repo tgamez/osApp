@@ -1,0 +1,62 @@
+
+ <link rel="stylesheet" href="css/crud-customer.css">  
+
+<div class="container-fluid">
+              <div class="alert alert-success alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                	<strong class="">Error</strong> Hay un error en <a href="#" class="alert-link">campo</a>
+            </div>
+  
+      <div class="row clearfix">
+        <div class="col-md-12 column">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span>
+
+                        <span class="icon-bar"></span><span class="icon-bar"></span>
+
+                    </button> <a class="navbar-brand" href="#">Clientes</a>
+
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-default">Buscar</button>
+                        <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span></button> 
+                    </form>
+                </div>
+            </nav>
+        </div>
+  </div>
+  
+          <div class="col-md-12 column">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Código</th>
+						<th>Descripción</th>
+            <th>Tipo</th>
+						<th>Familia</th>
+            <th>Estado</th>
+						<th>Actualizado</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="product in products" ng-class="product.estado">
+						<td>{{product.id}}</td>
+						<td><a ui-sref="product">{{product.descripcion}}</a></td>
+						<td>{{product.tipo}}</td>
+						<td>{{product.familia}}</td>
+            <td>{{product.estado}}</td>
+						<td>{{product.actualizado}}</td>
+					</tr>
+				</tbody>
+			</table>
+          </div>
+          </div>
+        </div>
+    </div>
+
+  

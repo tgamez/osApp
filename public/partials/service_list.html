@@ -1,0 +1,105 @@
+<div style="margin-top:85px; margin-bottom:60px">  
+  <ul style="margin:0px; list-style-type: none;">
+
+
+    <li style="margin:0px; padding:0px; text-decoration:none">
+      <div class="row" style="border:1px solid #000">
+        <div class="col-sm-3" style="margin-top:20px">
+          S3AGU-001
+        </div>
+        <div class="col-sm-8">        
+          Impermeabilización de depósitos2
+        </div>
+        <div class="col-sm-1" style="font-size:30pt; text-align:right" ng-click="addItem(phone.id, phone.name, phone.price)">
+        <a ui-sref="formLegionella">
+          +
+        </a>
+        </div>
+      </div>
+    </li>
+
+
+    <li style="margin:0px; padding:0px; text-decoration:none">
+      <div class="row" style="border:1px solid #000">
+        <div class="col-sm-3" style="margin-top:20px">
+          S3AGU-001
+        </div>
+        <div class="col-sm-8">        
+          Tratamiento Legionella
+        </div>
+        <div class="col-sm-1" style="font-size:30pt; text-align:right" ng-click="addItem(phone.id, phone.name, phone.price)">
+        <a ui-sref="formLegionella">
+          +
+        </a>
+        </div>
+      </div>
+    </li>
+
+
+    <li style="margin:0px; padding:0px; text-decoration:none">
+      <div class="row" style="border:1px solid #000">
+        <div class="col-sm-3" style="margin-top:20px">
+          S3CDE-001
+        </div>
+        <div class="col-sm-8">        
+          Limpieza Chiemeneas
+        </div>
+        <div class="col-sm-1" style="font-size:30pt; text-align:right" ng-click="addItem(phone.id, phone.name, phone.price)">
+        <a ui-sref="formCondExtraccion">
+          +
+        </a>
+        </div>
+      </div>
+    </li>
+
+
+    <!-- <li ng-repeat="servicio in articuloName | filter:query | orderBy:orderProp" style="border-bottom:1px solid #ccc; padding:0px; margin:0px; height:82px">
+    
+      
+    </li> -->
+  </ul>
+
+  <!--Body content-->
+ <!--  <ul class="phones" >
+    <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" style="border-bottom:1px solid #ccc; padding:0px; margin:0px; height:82px">
+ 
+    <div class="row">
+      <div class="col-sm-8">
+        <a href="#/phone/{{phone.id}}" class="" style="float:left; margin-top:5px">
+          <img ng-src="{{phone.imageUrl}}" width="70px" height="70px" style="">
+        </a>
+        
+        <div style="padding-left:85px; padding-top:15px; font-size:10pt">
+          <a ui-sref="phonedetail({phoneId:phone.id})" style="">
+            {{phone.name}}
+          </a>
+          
+          <p style="margin:0px; padding:0px; ">{{phone.snippet}}</p>
+        </div>
+      </div>
+
+      <div class="col-sm-2" style="padding-top:25px; text-align:right">  
+
+        <span style="" ng-bind-html="phone.price | showPriceDiscount:phone.discount"></span>     
+
+      </div>
+
+      <div class="col-sm-2" style="text-align:right; color:#ccc">
+      
+        <span style="font-size:40pt; margin-right:10px " ng-click="removeItem(phone.id, phone.name, phone.price)" ng-bind-html="cart[phone.id] | showRemoveItem">  
+          -
+        </span>
+        <span style="font-size:30pt; color:black"> 
+          {{cart[phone.id] | number:0}}
+        </span>
+        
+        <span style="font-size:30pt; " ng-click="addItem(phone.id, phone.name, phone.price)">  
+          +
+        </span>
+      </div>
+
+    </div>
+    </li>
+  </ul> -->
+
+</div>

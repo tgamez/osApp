@@ -1,0 +1,25 @@
+
+
+<table class="table" style="margin-top:95px; margin-bottom:60px;">
+  <tbody>
+      <tr ng-repeat="cols in rows">
+        <td ng-repeat = "col in cols track by $index" style="border:0px; border-bottom:1px solid #ccc; padding:20px">
+          <img ng-src="{{col.imageUrl}}" width="70px" height="70px" style="float:left; margin-right:15px; margin-bottom:5px">    
+          <a ui-sref="phonedetail({phoneId:col.id})" style="margin-left: 0px">
+            {{col.name}}            
+          </a>
+          <p style="padding-left:40px; font-size:9pt">
+            {{col.snippet}}
+          </p>
+          <div style="clear:both; text-align:right; font-size:11pt; font-weight:bold; color: black">
+            <span style="text-decoration:line-through; font-weight:normal">{{col.price}} &euro;</span> <span style="color:red">{{col.price *0.5}} &euro;</span>
+          </div>
+          <!-- {{col.price}} -->
+        </td>        
+      </tr>
+  </tbody>
+</table>
+
+
+
+

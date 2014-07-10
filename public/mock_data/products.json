@@ -1,0 +1,33 @@
+{
+	"1":{
+		"id":"1",
+		"descripcion":"Limpieza Chimeneas",
+		"detalle":"Limpieza de tubos, componenetes y campana ....",
+		"tipo":"SV",
+		"familia":"H00AK001234",
+		"estado":"Activo",
+		"idImpuestos":"H",
+		"descripcionImpuesto":"IVA 21+5%",
+		"periodicidad":"3 meses",
+		"caracteristicas": "",
+		"actualizado": "2014-05-12",
+		"ficheros": [
+				{ "id": "1",
+				  "descripcion": "Especificaciones",
+				  "nombre": "Especs.pdf",
+				  "tipo" : "PDF",
+				  "categoria" : "ficha",				  
+				  "espacio": "128 Kb"
+			    }
+			],
+		"formularios": [{
+			"id":"1",
+			"nombre":"Instalación Chiemea",
+			"obligatorio":true
+			},{
+			"id":"2",
+			"nombre":"Condiciones Económicas",
+			"obligatorio":true
+		}]
+	}
+}

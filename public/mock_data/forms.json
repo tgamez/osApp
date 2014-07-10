@@ -1,0 +1,36 @@
+{
+	"1":{ "id": "1",
+	  "descripcion": "Limpieza chimeneas",
+	  "actualizado": "2014-03-12",
+	  "campos": [ {
+		  	"id":"1",
+		  	"tipo":"text",
+		  	"orden":"1",
+		  	"obligatorio": false,
+		  	"descripcion": "Cuando se realizo la última limpieza"	  		  	
+	  		},
+		{
+		  	"id":"2",
+		  	"tipo":"selector",
+		  	"orden":"2",
+		  	"obligatorio": true,
+		  	"descripcion": "Localización de turbina",
+		  	"values": [
+		  		"Vacío",
+	  			"Campana",
+	  			"Altillo"
+		  		]
+			},
+		{
+		  	"id":"3",
+		  	"tipo":"check",
+		  	"orden":"3",
+		  	"obligatorio": false,
+		  	"descripcion": "Dispone de equipo de Extinción de incendios Automática"
+			}			
+		]
+	}
+}
+
+
+

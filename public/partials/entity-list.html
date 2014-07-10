@@ -1,0 +1,80 @@
+
+ <link rel="stylesheet" href="css/crud-customer.css">  
+
+<div class="container-fluid">
+    <div class="alert alert-success alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+      <strong class="">Error</strong> Hay un error en <a href="#" class="alert-link">campo</a>
+    </div>
+  
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button> <a class="navbar-brand" href="#">{{title}}</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-default">Buscar</button>
+                    <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span></button> 
+                </form>
+            </div>
+
+            <div ng-repeat="field in filters" class="row">       
+               <div class="form-group col-xs-6" ng-if="field.type=='date'">
+                  <label for="code">{{field.title}}</label>
+                    <p class="input-group">
+                      <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="entityData[field.name]" is-open="fechaInicio" max-date="'2025-12-31'" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="toggleOpenDatePicker($event,field.name)"><i class="glyphicon glyphicon-calendar"></i></button>
+                      </span>
+                    </p>
+              </div>  
+              <div class="form-group col-xs-6" ng-if="field.type=='link'">
+                <label for="code">{{field.title}}</label>
+                <button type="submit" class="form-control btn-custom" ui-sref='{{field.entity}}' >{{entityData[field.name]}}</button>
+              </div> 
+              <div class="form-group col-xs-12" ng-if="field.type=='text'">
+                  <label for="code">{{field.title}}</label>
+                  <input type="text" class="form-control" ng-model="entityData[field.name]">
+              </div>    
+            </div>
+        </div>
+    </nav>
+
+</div>
+<!-- Filter -->
+
+<!-- Table -->
+  <div class="row">
+      <div class="col-md-12 column">
+  			<table class="table">
+  				<thead>
+  					<tr>
+  						<th></th>
+  						<th ng-repeat="column in columns">{{column.title}}</th>
+  					</tr>
+  				</thead>
+  				<tbody>
+  					<tr ng-repeat="linea in tabLines" ng-class="linea.estado">
+  						<td><input type="checkbox" ng-model="myModel.optionA"></td>
+  						<td ng-repeat="column in columns">
+  						      <div class="form-group col-xs-6" ng-if="column.type=='link'">
+  	        					<a ui-sref="{{
+  	        					column.entity}}">{{linea[column.name]}}</a>
+        						  </div>    
+  						      <div class="form-group col-xs-6" ng-if="column.type!='link'">
+  								{{linea[column.name]}}
+  							  </div>    
+  						</td>
+  					</tr>
+  				</tbody>
+  			</table>
+      </div>
+	</div>

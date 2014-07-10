@@ -1,0 +1,10 @@
+{
+	"1": { 
+		"ventas": [ 
+			{ "id":"1","linea": "Eurolube", "año": "2014", "importe": "600" },
+			{ "id":"2","linea": "Dogus", "año": "2014", "importe": "1200" },
+			{ "id":"3","linea": "Deterco", "año": "2014", "importe": "3200" },
+			{ "id":"4","linea": "Servicios", "año": "2014", "importe": "8200" }
+		]
+	}
+}

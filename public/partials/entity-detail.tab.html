@@ -1,0 +1,54 @@
+
+    <p>.</p>
+    <div class="row">
+           <div class="col-md-12 column ">
+           <span class="pull-right">
+           		<button class="btn" type="submit"><span class="glyphicon glyphicon-trash"></span></button>
+           		<button class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span></button> 
+           </span>
+				
+				
+          </div>
+    </div>          
+    <div class="row">          
+          <div class="col-md-12 column">
+			<table class="table">
+				<thead>
+					<tr>
+						<th></th>
+						<th ng-repeat="column in columns">{{column.title}}</th>
+					</tr>
+				</thead>
+				<tbody>
+						<tr ng-repeat-start="linea in tabLines" ng-class="linea.estado" ng-click="switchSelectLine(linea.num);">
+							<td><input type="checkbox" ng-model="myModel.optionA"></td>
+							<td ng-repeat="column in columns">
+								<div ng-if="field.type=='link'">
+									<a ui-sref="{{field.entity}}">{{linea[column.name]}}</a>
+								</div>
+								<div ng-if="field.type!='link'">
+									{{linea[column.name]}}
+								</div>
+							</td>
+						<tr ng-repeat-end ng-show="linea.num==selectedLine">
+							<td colspan="6">
+						    <div class="row" ng-repeat="column in columns">
+							    <div class="form-group col-xs-6">
+							          <label for="code">{{column.title}}</label>
+							          <button type="text" class="form-control input-normal">{{linea[column.name]}}</button>
+							    </div>
+							 </div>	
+						    <div class="row">				        
+	           					<div class="col-md-12 column">
+	           					    <span class="pull-right">  
+				                        <button class="btn" type="submit"><i class="glyphicon glyphicon-arrow-left"></i> Volver</button>
+										<button class="btn btn-success" type="submit"><i class="glyphicon glyphicon-ok"></i> Guardar</button>
+									</span>
+	         					</div>
+							</div>	         					
+							</td>
+						</tr>
+				</tbody>
+			</table>
+          </div>
+	</div>

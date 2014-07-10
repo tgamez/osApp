@@ -1,0 +1,12 @@
+{
+	"1": { 
+		"ventas": [ 
+			{ "id":"1", "cliente": "Restaurante 1", "año": "2014", "importe": "10200" },
+			{ "id":"2", "cliente": "Cathering 2", "año": "2014", "importe": "6200" },
+			{ "id":"3", "cliente": "Colegio 3", "año": "2014", "importe": "7200" },
+			{ "id":"4", "cliente": "Restaurante 4", "año": "2014", "importe": "2200" },
+			{ "id":"5", "cliente": "Estacio Servicio 1", "año": "2014", "importe": "7200" },
+			{ "id":"6", "cliente": "Colegio Mayor", "año": "2014", "importe": "8200" }
+		]
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"1": { 
+		"delegado" : "1",
+		"ventas": [ 
+			{ "id":"1", "mes": "Enero", "año": "2014", "importe": 5200 },
+			{ "id":"2", "mes": "Febrero", "año": "2014", "importe": 6200 },
+			{ "id":"3", "mes": "Marzo", "año": "2014", "importe": 7200 },
+			{ "id":"4", "mes": "Abril", "año": "2014", "importe": 6200 },
+			{ "id":"5", "mes": "Mayo", "año": "2014", "importe": 6200 },
+			{ "id":"6", "mes": "Junio", "año": "2014", "importe": 8200 },			
+			{ "id":"7", "mes": "Julio", "año": "2014", "importe": 6200 },
+			{ "id":"8", "mes": "Agosto", "año": "2014", "importe": 4200 },
+			{ "id":"9", "mes": "Septiembre", "año": "2014", "importe": 6200 },			
+			{ "id":"10", "mes": "Octubre", "año": "2014", "importe": 7200 },			
+			{ "id":"11", "mes": "Noviembre", "año": "2014", "importe": 8200 },
+			{ "id":"12", "mes": "Diciembre", "año": "2014", "importe": 9200 }
+		]
+	}
+}

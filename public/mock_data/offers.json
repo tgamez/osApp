@@ -1,0 +1,65 @@
+{ 
+	"1": {
+		"id": "1974",
+		"fechaInicio": "2014-05-15",
+		"fechaFin": "2015-05-14",
+		"cliente": "43000123456",
+		"estado": "Borrador",
+		"solicitud": "9873",
+		"descripcionCliente": "Restaurante Pacomer Algo",
+		"descripcion": "Limpieza de Chimeneas de cocina principal",
+		"descripcionServicio": "Limpieza de Chimeneas de cocina principal",
+		"lineas" : [ 
+			{"num":"1", 
+			 "codigo":"12354XF", 
+			 "descripcion":"Limpieza Chimenea", 
+			 "precio":"1250,25", 
+			 "dto1":"0", 
+			 "dto2":"0", 
+			 "cantidad":"1", 
+			 "estado": ""},
+			{"num":"2", "codigo":"84455EC", "descripcion":"Servicio Ventiladores", "precio":"250,25", "descuento":"5","estado": "active"},
+			{"num":"3", "codigo":"45234XF", "descripcion":"Limpieza Chimenea", "precio":"1250,25", "descuento":"0","estado": "success"},
+			{"num":"4", "codigo":"45234XF", "descripcion":"Limpieza Chimenea", "precio":"1250,25", "descuento":"0","estado": "danger"},
+			{"num":"5", "codigo":"23444EC", "descripcion":"Servicio Ventiladores", "precio":"250,25", "descuento":"5","estado": "warning"}
+		],
+		"ficheros": [
+			{"id":"1","nombre":"Captura1.jpg","descripcion":"Instalacion techo","tipo":"JPG", "categoria":"ficha","espacio": "128 Kb"}
+		],
+		"formularios": [
+				{ "num":"1",
+				  "formulario":"1",
+				  "descripción":"Datos Chimenea",
+				  "datos":{"1":"Hace 6 meses","2":"Campana","3":"Si"},
+				  "fecha":"2014-06-16",
+				  "usuario":"Arturo G.",
+				  "estado":""}
+			],
+		"direccionEntrega": "1",
+		"direccionFacturacion": "1",
+		"notasInternas":"Anotaciones internas asociadas a la solicitud"
+	},
+	"2":{
+		"id": "2132",
+		"fechaInicio": "2014-05-15",
+		"fechaFin": "2015-05-14",
+		"cliente": "43000123456",
+		"estado": "Borrador",
+		"solicitud": "9873",
+		"descripcion_cliente": "Colegio Mayor",
+		"descripcion": "Tratamiento Legionella",
+		"lineas" : [ 
+			{"num":"1", "codigo":"12354XF", "descripcion":"Limpieza Chimenea", "precio":"1250,25", "descuento":"0", "estado": ""},
+			{"num":"2", "codigo":"84455EC", "descripcion":"Servicio Ventiladores", "precio":"250,25", "descuento":"5","estado": "active"},
+			{"num":"3", "codigo":"45234XF", "descripcion":"Limpieza Chimenea", "precio":"1250,25", "descuento":"0","estado": "success"},
+			{"num":"4", "codigo":"45234XF", "descripcion":"Limpieza Chimenea", "precio":"1250,25", "descuento":"0","estado": "danger"},
+			{"num":"5", "codigo":"23444EC", "descripcion":"Servicio Ventiladores", "precio":"250,25", "descuento":"5","estado": "warning"}
+		],
+		"ficheros": [
+			{"id":"1","nombre":"Captura1.jpg","tipo":"foto","descripcion":"Instalacion techo"},
+			{"id":"2","nombre":"Captura2.jpg","tipo":"foto","descripcion":"Campana principal"},
+			{"id":"3","nombre":"Manual.pdf","tipo":"doc","descripcion":"Manual instalación"},
+			{"id":"4","nombre":"Croquis.doc","tipo":"doc","descripcion":"Croquis instalación"}
+		] 
+	}
+}

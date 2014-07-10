@@ -1,0 +1,52 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-top:50px; height:53px">
+  <div class="collapse navbar-collapse" style="padding-left:15px">
+    
+    <ul class="nav navbar-nav">
+      <li class="active">
+        <input ng-model="query" placeholder="Buscar..." style="border-radius:5px; padding:3px; width:200px; margin-right:20px; margin-top:11px">
+      </li>
+      <li style="padding-top:15px">
+        Ordenar por:
+      </li>
+      <li style="padding-top:9px; padding-left:5px">
+        <span class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+            {{orderPropScreen}}
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation" ng-click="changeOrderProp('name')"><a role="menuitem" tabindex="-1" style="padding:10px">Nombre</a></li>
+            <li role="presentation" ng-click="changeOrderProp('age')"><a role="menuitem" tabindex="-1" style="padding:10px">Más nuevo</a></li>
+           
+          </ul>
+        </span>
+      </li>
+    </ul>
+
+    <div class="nav navbar-nav navbar-right " style="padding-right:30px; padding-top:3px">
+        <div class="btn-group" data-toggle="buttons">
+          
+          <label ui-sref=".list" class="btn btn-primary btn-lg active">
+            <input type="radio" name="options" id="option3">  <span class="glyphicon glyphicon-th-list" ></span>
+          </label>         
+          
+          <label ui-sref=".grid" class="btn btn-primary btn-lg" >
+            <input type="radio" name="options" id="option2"> <span class="glyphicon glyphicon-th" ></span>
+          </label>
+
+          <label ui-sref=".grid-lg" class="btn btn-primary btn-lg " >           
+            <input type="radio" name="options" id="option1"> <span class="glyphicon glyphicon-th-large" ></span>            
+          </label>
+
+        </div>
+      </div>    
+  </div>
+</nav>
+
+<div class="ui-view-container">
+
+  <div class="{{productListPageClass}}" ui-view style="padding:20px"></div>
+ 
+</div>
+
+

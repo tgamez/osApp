@@ -1,0 +1,21 @@
+{
+  "1": {
+    "id": "1",
+    "instante": "1310669017",
+    "descripcion": "Comprobar situacion Oferta",
+    "autor": "elena",
+    "destinatario": "arturo",
+    "tipo": "Urgente",
+    "id_evento":"1",
+    "evento":"Presentar Oferta",
+    "id_cliente": "43000   100",
+    "cliente": "Restaurante Pacomer Algo",
+    "id_oferta": "1",
+    "oferta": "Limpieza Chimeneas",
+    "id_notificacion":"2",
+    "notificacion": "Peticion de Situacion",
+    "nota": "Importante",
+    "usuario": "Arturo",
+    "actualizado": "1310669017"
+  }
+}

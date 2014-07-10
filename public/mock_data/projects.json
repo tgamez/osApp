@@ -1,0 +1,52 @@
+{ 
+	"1": {
+		"id": "1974",
+		"fechaInicio": "2014-05-15",
+		"fechaFin": "2015-05-14",
+		"id_cliente": "43000123456",
+		"cliente": "Restaurante Pacomer Algo",
+		"id_solicitud":"1",
+		"solicitud":"Limpieza chimenea",
+		"id_oferta":"1",
+		"oferta":"Limpieza chimenea",
+		"id_solicitud":"1",
+		"solicitud":"Limpieza chimenea",		
+		"estado": "Borrador",
+		"descripcion": "Limpieza de Chimeneas de cocina principal",
+		"descripcionServicio": "Limpieza de Chimeneas de cocina principal",
+		"actuaciones": [
+			{"id":"1","cuando":"2014-06-01","id_tecnico":"1","tecnico":"Javier Lopez","descripcion":"Instalacion techo",
+				"notas":"Todo correcto",
+				"estado":"realizado",
+				"id_direccion":"1",
+				"direccion":"Oficina Central",				
+				"firma":{
+					"cuando":"2014-06-01",
+					"id_fichero":"1"
+				}
+			}
+		],		
+		"ficheros": [
+			{"id":"1","nombre":"Captura1.jpg","descripcion":"Instalacion techo","tipo":"JPG", "categoria":"ficha","espacio": "128 Kb"}
+		],
+		"tecnicos": [
+			{"id":"1","id_tecnico":"1","descripcion":"Javier Lopez"},
+			{"id":"2","id_tecnico":"2","descripcion":"Ana Ramirez"}			
+		],		
+		"direccionEntrega": "1",
+		"direccionFacturacion": "1",
+		"horarios":{
+			"id":"1","dias":"Lunes-Viernes","horario":"9:00-19:00",
+			"id":"2","dias":"Sabado-Domingo","":"09:00-14:00"
+		},
+		"notasInternas":"Anotaciones internas asociadas a la solicitud",
+		"notas": [
+			{"id":"1","descripcion":"Para acceder","nota":"Es necesario contactar con Portero"},
+			{"id":"2","descripcion":"Material","nota":"Material almacenado en cobertizo"}
+		],
+		"notificaciones": [
+			{"id":"1","descripcion":"Solicitud de Visita"},
+			{"id":"2","descripcion":"Revisión de estado cliente"}
+		]
+	}
+}

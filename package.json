@@ -1,0 +1,27 @@
+{
+  "version": "0.0.0",
+  "private": true,
+  "name": "angular-phonecat",
+  "description": "A tutorial application for AngularJS",
+  "repository": "https://github.com/angular/angular-phonecat",
+  "license": "MIT",
+  "devDependencies": {       
+    
+    "http-server": "latest",
+    "grunt-cli": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-watch": "latest",
+    "bower": "latest",
+    "grunt": "latest",
+    "matchdep": "latest",
+    "grunt-express": "latest",
+    "grunt-open": "latest",
+    "express":"latest"
+  },
+  "scripts": {    
+    "start": "node server.js"                 
+  },
+  "main": "server.js"
+}

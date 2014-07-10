@@ -1,0 +1,19 @@
+{
+  "1": {
+    "id": "1",
+    "instante": "1310669017",
+    "descripcion": "Presentar oferta",
+    "autor": "elena",
+    "destinatario": "arturo",
+    "tipo": "visita",
+    "calendario": "vis-arturo",
+    "id_cliente": "43000   100",
+    "cliente": "Restaurante Pacomer Algo",
+    "id_oferta": "1",
+    "oferta": "Limpieza Chimeneas",
+    "notificación": "1",
+    "nota": "Importante",
+    "usuario": "Arturo",
+    "actualizado": "1310669017"
+  }
+}

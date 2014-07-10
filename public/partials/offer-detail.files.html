@@ -1,0 +1,75 @@
+
+
+    <p>.</p>
+    <div class="row">
+           <div class="col-md-12 column ">
+           <span class="pull-right">
+           		<button class="btn" type="submit"><span class="glyphicon glyphicon-trash"></span></button>
+           		<button class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span></button> 
+           </span>
+				
+				
+          </div>
+    </div>          
+    <div class="row">          
+          <div class="col-md-12 column">
+			<table class="table">
+				<thead>
+					<tr>
+						<th></th>
+						<th>#</th>
+						<th>Descripción</th>
+						<th>Tipo</th>
+						<th>Nombre</th>
+						<th>Estado</th>												
+					</tr>
+				</thead>
+				<tbody>
+						<tr ng-repeat-start="linea in offer.ficheros" ng-class="linea.estado" ng-click="switchSelectLine(linea.id);">
+							<td><input type="checkbox" ng-model="myModel.optionA"></td>
+							<td>{{linea.id}}</td>
+							<td>{{linea.descripcion}}</td>
+							<td>{{linea.tipo}}</td>
+							<td>{{linea.nombre}}</td>
+							<td>{{linea.estado}}</td>
+						<tr ng-repeat-end ng-show="linea.id==selectedLine">
+							<td colspan="6">
+						    <div class="row">
+							    <div class="form-group col-xs-6">
+							          <label for="code">Descripcion</label>
+							          <input type="text" class="form-control input-normal" ng-model="linea.descripcion"/>
+							        </div>
+							    </div>
+							 </div>
+						     <div class="row">						        
+							    <div class="form-group col-xs-6">
+							          <label for="code">Tipo</label>
+							         <select class="form-control">
+                                  		<option value="foto">Fotografia</option>
+                                  		<option value="doc">Documento</option>
+                                  		<option value="cert">Certificado</option>
+                                  		<option value="misc">Otros</option>
+                              		</select>
+							    </div>						   
+						    </div>		
+						    <div class="row">						        
+							    <div class="form-group col-xs-6">
+							          <label for="code">Archivo</label>
+							           <button type="text" class="form-control input-normal">{{linea.nombre}}</button>
+							        </div>
+							    </div>						   
+						    </div>	
+						    <div class="row">				        
+	           					<div class="col-md-12 column">
+	           					    <span class="pull-right">  
+				                        <button class="btn" type="submit"><i class="glyphicon glyphicon-arrow-left"></i> Volver</button>
+										<button class="btn btn-success" type="submit"><i class="glyphicon glyphicon-ok"></i> Guardar</button>
+									</span>
+	         					</div>
+							</div>	         					
+							</td>
+						</tr>
+				</tbody>
+			</table>
+          </div>
+	</div>

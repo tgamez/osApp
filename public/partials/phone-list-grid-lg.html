@@ -1,0 +1,60 @@
+<table class="table" style="margin-top:35px">
+      <tbody>
+          <tr ng-repeat="cols in rows">
+
+              <td ng-repeat = "col in cols track by $index">
+				<img ng-src="{{col.imageUrl}}" width="70px" height="70px" style="">
+				<!-- {{col}} -->
+              </td>
+          	
+          </tr>
+      </tbody>
+  </table>
+
+<div style="margin-top:35px; margin-bottom:60px">      
+  <!--Body content-->
+  <ul class="phones" >
+    <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" style="border-bottom:1px solid #ccc; padding:0px; margin:0px">
+ 
+    <div class="row">
+      <div class="col-sm-8">
+        <a href="#/phone/{{phone.id}}" class="" style="float:left; margin-top:5px">
+          <img ng-src="{{phone.imageUrl}}" width="70px" height="70px" style="">
+        </a>
+        <!-- <a href="#/phone/{{phone.id}}">{{phone.name}}</a> -->
+        <div style="padding-left:85px; padding-top:15px; font-size:10pt">
+          <a ui-sref="phonedetail({phoneId:phone.id})" style="">
+            {{phone.name}}
+          </a>
+          
+          <p style="margin:0px; padding:0px; ">{{phone.snippet}}</p>
+        </div>
+      </div>
+
+      <div class="col-sm-2" style="padding-top:25px">
+        <center>
+          <span style="font-size:16pt; color:#555; ">
+            60,00 &euro;
+          </span>
+        </center>
+      </div>
+
+      <div class="col-sm-2" style="text-align:right; color:#ccc">
+      
+        <span style="font-size:38pt; ">  
+          -
+        </span>
+        <span style="font-size:28pt; ">  
+          0
+        </span>
+        
+        <span style="font-size:30pt; ">  
+          +
+        </span>
+      </div>
+
+    </div>
+    </li>
+  </ul>
+
+</div>

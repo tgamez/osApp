@@ -1,0 +1,38 @@
+
+
+  - Multiple Datapicker (UI-Bootstrap):
+
+      Crear dentro $scope variables dinamicamente con identificador para datePicker que intique si esta desplegado o no
+      Afecta a metodos controller: open
+
+  - Desplegar acordeon en filas de table (UI-Bootstrap):
+
+      Utilizar dos <tr> por cada fila, una con vista de tabla y otra con vista detalle.
+      * Se puede realizar con un ng-repeat marcando como 'start' el primer 'tr' y como 'end' el segundo.
+
+  - Pestañas con contenido dinamico de ui-view (UI-Bootstrap, ui-route):
+
+      La vista de cada pestaña puede definirse en un fichero independiente, un 'partial'. 
+      Se define por un lado las cabeceras con 'tab-heading' y por otro el contenido con una 'ui-view' con nombre, para que lo gestione el Controller especificando las 'views' con el nombre de la pestaña activada:
+
+         .state('offers.lines', {
+            url: '/offerLines',            
+            views: {
+                'subView': {
+                    templateUrl: 'partials/offer-detail.lines.html',
+                    controller: 'OfferDetailCtrl'  
+                }
+            }
+        })
+
+
+      <tabset>
+  		<tab ng-repeat="tab in tabs" active="tab.active" disabled="tab.disabled">
+    		<tab-heading>
+      			<a ui-sref="{{tab.template}}">{{tab.title}}</a>
+    		</tab-heading>
+  		</tab>
+	  </tabset>
+	   <div class="row">
+	    	<div ui-view="subView"></div>
+		</div>

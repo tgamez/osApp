@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en" ng-app="akStoreApp">
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>
+    Prolutec App
+  </title>
+
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/ng-grid/ng-grid.css">  
+
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/animations.css">  
+  <!-- <link rel="stylesheet" href="css/anime.css">   -->
+  <link rel="stylesheet" href="css/myanimations.css">
+  <!-- <link rel="stylesheet" href="css/animations2.css"> -->
+
+  <link rel="stylesheet" href="css/slidebar.css">  
+
+  <script>
+    document.documentElement.style.overflowX = "hidden";
+    document.documentElement.style.overflowY = "hidden";
+    document.body.scroll = "no"; // Internet Explorer
+  </script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-static-top navbar-inverse" role="navigation" style="margin-bottom:0px">
+  <div class="container-fluid">
+  
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <span class="navbar-brand glyphicon glyphicon-circle-arrow-left" onClick="goBack()" style="font-size:25px" ></span>
+
+      <a class="navbar-brand" href="#" style="padding-top:6px">
+        <img width="120px" height="36px" src="img/logoPL.png" style="" />
+      </a>
+
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+       
+        <li id="headerCatalogLink"><a ui-sref="phones.list">Catálogo</a></li>
+        <li id="headerOffersLink"><a ui-sref="offers({type:'solicitud' })">Solictudes</a></li>
+        <li id="headerOffersLink"><a ui-sref="offers({type:'oferta' })">Ofertas</a></li>        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" >Gestión <b class="caret"></b></a>
+          <ul class="dropdown-menu" style="z-index:50000">
+            <li id="headerClientsLink">
+              <a ui-sref="customers">
+                <span class="glyphicon glyphicon-user" style="border:0px solid #ccc; "></span>
+                <span style="margin-left:10px">Clientes</span>
+              </a>
+            </li>
+            <li id="headerProductsLink">
+              <a ui-sref="products">
+                <span class="glyphicon glyphicon-briefcase" style="border:0px solid #ccc; "></span>
+                <span style="margin-left:10px">Productos</span>
+              </a>
+            </li>
+            <li id="headerProductsLink">
+              <a ui-sref="projects">
+                <span class="glyphicon glyphicon-briefcase" style="border:0px solid #ccc; "></span>
+                <span style="margin-left:10px">Expedientes</span>
+              </a>
+            </li>            
+            <li class="divider"></li>
+            <li style="margin-right:2px">
+              <a ui-sref="multipanel">
+                <span class="glyphicon glyphicon-tasks" style="border:0px solid #ccc; "></span>
+                <span style="margin-left:10px">MultiPanel</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+ 
+      <ul class="nav navbar-nav navbar-right">
+        <li style="margin-right:2px">
+          <a ui-sref="customers">
+            <img src="img/google_maps.png" width="26px" height="26px" style="margin-right:7px;"/>
+            43000 100 - Restaurante Pacomer Algo
+            <img src="img/refresh.png" width="26px" height="26px" style="margin-left:7px;"/>
+          </a>
+        </li>
+        <li style="margin-right:2px">
+          <a ui-sref="notifications">
+            <span class="glyphicon glyphicon-tasks" style="border:0px solid #ccc; "></span>
+          </a>
+        </li>
+        <li style="margin-right:2px">
+          <a ui-sref="calendars">
+            <span class="glyphicon glyphicon-calendar" style="border:0px solid #ccc; "></span>
+          </a>
+        </li>
+
+        <li class="dropdown" >
+          <a href="#" class="dropdown-toggle glyphicon glyphicon-user" > 
+            Arturo Gómez <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu" style="">
+            <li>
+              <a ui-sref="notifications">
+                <span class="glyphicon glyphicon-tasks" style="border:0px solid #ccc; "></span>
+                <span style="margin-left:10px">Notificaciones</span>
+              </a>
+            </li>
+            <li >
+              <a ui-sref="calendars">
+                <span class="glyphicon glyphicon-calendar" style="border:0px solid #ccc; "></span>
+                <span style="margin-left:10px">Calendario</span>
+              </a>
+            </li>
+            <li >
+              <a ui-sref="statistics">
+                <span class="glyphicon glyphicon-calendar" style="border:0px solid #ccc; "></span>
+                <span style="margin-left:10px">Estadísticas</span>
+              </a>
+            </li>            
+            <li id="headerClientsLink">
+              <a ui-sref="userSettings">
+                <span class="glyphicon glyphicon-user" style="border:0px solid #ccc; "></span>
+                <span style="margin-left:10px">Configuración</span>
+              </a>
+            </li>
+            <li class="divider"></li>
+            <li >
+              <a ui-sref="multipanel">
+                <span class="glyphicon glyphicon-log-out" style="border:0px solid #ccc; "></span>
+                <span style="margin-left:10px">Cerrar Sesion</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li style="margin-right:2px">
+          <div class="btn-group btn-toggle" style="margin-top:10px"> 
+            <button class="btn btn-sm btn-primary active" ng-click="onlineState='Online'" ng-init="onlineState='Offline'">  
+              {{onlineState}}
+            </button>
+          </div>          
+        </li>
+      </ul>      
+  
+    </div> 
+  </div>
+</nav>
+
+ <!-- /#page-content -->
+<div class="row" style="">
+  <div class="ui-view-container" style="padding-left:15px; padding-right:15px">
+    <div class="page {{pageClass}} " ui-view style="background-color:white"></div>
+  </div>
+</div> 
+
+<nav ng-controller="FooterCtrl" class="navbar navbar-inverse navbar-fixed-bottom" role="navigation" style="height:40px">
+
+  <!-- <div class="container" style="margin-right:0px; color:white"> -->
+    
+    <div class="row" style="border:0px solid #fff; margin-top:11px; color:white; padding-left:15px; padding-right:20px">
+      <div class="col-xs-3" style="text-align:left; ">
+
+        
+         <!--  <span class="glyphicon glyphicon-chevron-left" style="margin-right:10px" ng-click="previousPage()"> </span>             
+          <input type="text" value="{{page}} of 5" style="color:black; padding-left:10px; padding-right:10px; border-radius:5px; width:60px;" />        
+          <span class="glyphicon glyphicon-chevron-right" style="margin-left:10px" ng-click="nextPage()"> </span> -->
+      </div>
+      
+      <div class="col-xs-6" style="text-align:center; margin-top:3px">
+            Grupo Prolutec, S.L.
+      </div>
+      
+      <div class="col-xs-3" style="text-align:right">
+        
+        <!-- <span style="">
+          {{n_cart_items}} items
+        </span>
+        <span style="color:white; margin-left:15px">
+          {{cart_price}} &euro;
+        </span>
+        
+        <span class="glyphicon glyphicon-shopping-cart btn-lg " style="color:#ccc; padding-right:0px; margin:0px; padding:0px; padding-left:15px"></span>
+          Cart -->
+      </div>
+ 
+    </div>
+    <!-- - Seleccionar cliente -
+    <div class="pull-right" style="color:#ccc">
+      <span style="margin-right:15px">
+        {{n_cart_items}} items
+      </span>
+      <span style="color:white">
+        {{cart_price}} &euro;
+      </span>
+      <span class="glyphicon glyphicon-shopping-cart btn-lg " style="color:#ccc; padding-right:0px"></span>
+      Cart
+     -->
+     <!-- </div> -->
+</nav>
+
+ 
+  <script src="bower_components/jquery/jquery.js"></script>  
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>  
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>  
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>  
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="bower_components/ng-grid/build/ng-grid.min.js"></script>
+  <script src="bower_components/restangular/dist/restangular.min.js"></script>
+  <script src="bower_components/lodash/dist/lodash.min.js"></script>
+  <!-- <script src="bower_components/bootstrap/js/button.js"></script> -->
+  <script src="js/angular_app.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/slidebar.js"></script>
+  <script type="text/javascript" src="js/canvasjs.min.js"></script>
+</head>
+</body>
+</html>

@@ -1,0 +1,127 @@
+{
+	"1": {	"id": "1",
+			"idRef": "43000   100",
+			"nombre": "Restaurante Pacomer algo",
+			"razonSocial": "Restaurante Pacomer algo",
+			"NIF": "12345678Y",
+			"direccion": "C/ Aragon, S/N",
+			"poblacion": "Barcelona",
+			"provincia": "Barcelona",
+			"codigoPostal": "08902",
+			"país": "España",
+			"estado": "active",
+			"actualizado": "2014-03-12",
+			"observaciones": [
+					{"id":"1",
+					 "tipo":"Propuesta",
+					 "clase":"Entrega",
+					 "texto":"Observacion para Entrega"
+					},{"id":"2",
+					"tipo":"Propuesta",
+					 "clase":"Factura",
+					 "texto":"Observacion para Facturar"
+					},{"id":"3",
+					"tipo":"Propuesta",
+					 "clase":"General",
+					 "texto":"Observacion a considerar"					 
+					}
+				],
+			"id_delegado": "1",
+			"delegadoPrincipal": "Arturo Gómez",
+			"zonaComercial": "01",
+			"contactos": [
+				{
+					"id": "1",
+					"nombre": "Javier Arola",
+					"descripcion": "Encargado de compras",
+					"direccion": "1",
+					"telefono": "933847234",
+					"eMail": "contact@mail.com"
+				}
+			],
+		    "direcciones": 
+	    		[
+	    			{
+	    				"id": "1",
+	    				"tipo": "propuesta",
+	    				"clase":"Entrega",
+						"nombre": "Javier Arola",
+						"descripcion": "Encargado de compras",
+						"direccion": "C/ Aragon, S/N",
+						"poblacion": "Barcelona",
+						"provincia": "Barcelona",
+						"codigoPostal": "08902",
+						"país": "España",
+						"latitud": "1.45",
+						"longitud": "2.34"
+	    			},
+	    				    			{
+	    				"id": "2",
+	    				"tipo": "propuesta",
+	    				"clase":"Factura",
+						"nombre": "Javier Arola",
+						"descripcion": "Encargado de compras",
+						"direccion": "C/ Aragon, S/N",
+						"poblacion": "Barcelona",
+						"provincia": "Barcelona",
+						"codigoPostal": "08902",
+						"país": "España",
+						"latitud": "1.45",
+						"longitud": "2.34"
+	    			}
+
+	    		],
+		    "domiciliaciones": 
+	    		[
+	    			{
+	    				"id": "1",
+						"entidad": "Caixa",
+						"oficina": "Principal",
+						"IBAN": "12309487644123",
+						"SWIFT": "1234"
+	    			}
+	    		],
+			"ficheros": [
+						{ 	"id": "1",
+						  	"nombre": "catalog.pdf",
+						 	"descripcion": "Catalogo",
+						  	"tipo" : "PDF",
+							"categoria" : "ficha",				  
+						  	"espacio": "128 Kb"
+					    }
+					],
+			"formaPago": {
+					"tipo": "transferencia"
+				},
+			 "listaPrecios": "PRE1",
+			 "dto1": 0.0,
+			 "preciosEspeciales": [ {
+			 		"idArticulo": "ART1",
+			 		"nombre": "Spray Limpiador",
+			 		"precio": 125.45,
+			 		"dto1": 5.0,
+			 		"dto2": 5.0,
+			 		"fechaInicio": "2014-01-01",
+			 		"fechaFin": "2014-12-31"
+			 		}
+			 	]
+			},
+	"2": {	"id": "2",
+			"nombre": "Colegio Mayor",
+			"provincia": "Barcelona",
+			"direccion": "C/ Sabia, 37",
+			"estado": "success",
+			"cambiado": "2014-05-12" },
+	"3": {	"id": "3",
+			"nombre": "Llar d'Infants Anec",
+			"provincia": "Barcelona",
+			"direccion": "C/ Aneguet, 12",
+			"estado": "warning",
+			"cambiado": "2014-05-12" },
+	"4": {	"id": "4", 
+			"nombre": "Pizzeria Roma",
+			"provincia": "Gava",
+			"direccion": "Rambla Principa, 3",
+			"estado": "danger",
+			"cambiado": "2014-05-12" }
+}
